@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import foodAsset from "@/assets/nutrition-bowl.png.asset.json";
 import portraitAsset from "@/assets/about-portrait.png.asset.json";
+import { ReferenceFooter } from "@/components/reference-footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -64,6 +65,7 @@ function Index() {
         <div className="about-dots" aria-hidden="true"><span /><span /><span /></div>
         </div>
       </section>
+      <ReferenceFooter />
     </main>
   );
 }

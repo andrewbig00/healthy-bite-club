@@ -14,3 +14,4 @@
 - Use a food-only crop through the asset service, not the entire reference screenshot, so page text and controls remain real elements.
 - Recreate additional reference sections on the index route with real text and isolated artwork crops; keep section geometry and colors in the central stylesheet to preserve visual matching.
 - Desktop sections use full-viewport backgrounds and centered capped content containers with normal-flow grids; reference artwork may intentionally extend beyond the container to retain the supplied composition.
+- Keep the reference footer in a dedicated presentation component with cropped logo/social artwork and real navigation text; do not invent destination pages or flows.
