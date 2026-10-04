@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import foodAsset from "@/assets/nutrition-bowl.png.asset.json";
-import portraitAsset from "@/assets/about-portrait.png.asset.json";
+import foodImage from "@/assets/nutrition-bowl.png";
+import portraitImage from "@/assets/about-portrait.png";
 import { ReferenceFooter } from "@/components/reference-footer";
 
 export const Route = createFileRoute("/")({
@@ -41,7 +41,7 @@ function Index() {
           <p className="reference-description">Get your custom plans &amp;<br />one-on-one guidance from our experts</p>
           <Button variant="frameAppointment">Umów wizytę</Button>
         </div>
-        <img className="reference-food" src={foodAsset.url} width="941" height="677" alt="Miska z awokado, groszkiem, warzywami i grzybami" />
+        <img className="reference-food" src={foodImage} width="941" height="677" alt="Miska z awokado, groszkiem, warzywami i grzybami" />
         </div>
         </div>
       </section>
@@ -60,7 +60,7 @@ function Index() {
             <li>Committed to staying up-to-date with the latest research and trends in nutrition</li>
           </ul>
         </div>
-        <img className="about-portrait" src={portraitAsset.url} width="770" height="683" alt="Uśmiechnięta kobieta w jeansowej kurtce" />
+        <img className="about-portrait" src={portraitImage} width="770" height="683" alt="Uśmiechnięta kobieta w jeansowej kurtce" />
         </div>
         <div className="about-dots" aria-hidden="true"><span /><span /><span /></div>
         </div>
