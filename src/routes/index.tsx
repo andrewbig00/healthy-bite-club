@@ -21,6 +21,7 @@ function Index() {
   return (
     <main className="reference-page">
       <section className="reference-frame" aria-label="Anna Wysocka — Dietetyk kliniczny">
+        <div className="desktop-content reference-content">
         <header className="reference-header">
           <p className="reference-wordmark">Anna Wysocka</p>
           <nav className="reference-nav" aria-label="Nawigacja główna">
@@ -32,6 +33,7 @@ function Index() {
             <Button variant="frameSignup">Sign up</Button>
           </div>
         </header>
+        <div className="reference-body">
         <div className="reference-copy">
           <h1 className="reference-title">Anna Wysocka</h1>
           <p className="reference-subtitle">Dietetyk kliniczny</p>
@@ -39,9 +41,13 @@ function Index() {
           <Button variant="frameAppointment">Umów wizytę</Button>
         </div>
         <img className="reference-food" src={foodAsset.url} width="941" height="677" alt="Miska z awokado, groszkiem, warzywami i grzybami" />
+        </div>
+        </div>
       </section>
       <section className="about-frame" aria-labelledby="about-title">
         <h2 id="about-title" className="about-title">O MNIE</h2>
+        <div className="desktop-content about-content">
+        <div className="about-body">
         <div className="about-copy">
           <p className="about-description">Our team of expert nutritionists is here to help you achieve your health and wellness goals. Our nutritionists are highly trained and qualified professionals with a deep understanding of the science behind nutrition and how it can impact your body and mind</p>
           <ul className="about-credentials">
@@ -54,7 +60,9 @@ function Index() {
           </ul>
         </div>
         <img className="about-portrait" src={portraitAsset.url} width="770" height="683" alt="Uśmiechnięta kobieta w jeansowej kurtce" />
+        </div>
         <div className="about-dots" aria-hidden="true"><span /><span /><span /></div>
+        </div>
       </section>
     </main>
   );
