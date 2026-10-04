@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import foodAsset from "@/assets/nutrition-bowl.png.asset.json";
-import portraitAsset from "@/assets/about-portrait.png.asset.json";
+import foodImage from "@/assets/nutrition-bowl.png";
+import portraitImage from "@/assets/about-portrait.png";
 import { ReferenceFooter } from "@/components/reference-footer";
 
 export const Route = createFileRoute("/")({
