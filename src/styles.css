@@ -62,7 +62,19 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --font-body: "Open Sans", Arial, sans-serif;
+  --font-wordmark: "Berkshire Swash", cursive;
+  --frame-mint: oklch(0.981 0.02 150);
+  --frame-edge: oklch(0.906 0.065 146);
+  --frame-outer: oklch(0.988 0.011 150);
+  --frame-red: oklch(0.602 0.208 23);
+  --frame-ink: oklch(0.2 0.009 150);
+  --frame-nav: oklch(0.465 0.012 150);
+  --frame-green: oklch(0.497 0.075 157);
+  --frame-button-top: oklch(0.873 0.096 145);
+  --frame-button-bottom: oklch(0.936 0.061 145);
+  --frame-shadow: oklch(0.36 0.027 145 / 28%);
+  --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -140,5 +152,55 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    margin: 0;
+    font-family: var(--font-body);
+    letter-spacing: 0;
   }
+}
+
+.reference-page { min-height: 100vh; overflow: hidden; }
+.reference-frame { position: relative; width: 100%; aspect-ratio: 1469 / 768; isolation: isolate; }
+.reference-frame::before, .reference-frame::after { content: ""; position: absolute; z-index: -1; top: 0; height: 93.2%; border-radius: 0 0 50% 50% / 0 0 9% 9%; }
+.reference-frame::before { left: -3%; width: 106%; background: var(--frame-outer); box-shadow: 0 5px 9px var(--frame-mint); }
+.reference-frame::after { left: 3.3%; width: 93.4%; background: var(--frame-mint); border-inline: 1px solid var(--frame-edge); border-bottom: 2px solid var(--frame-edge); box-shadow: 0 4px 9px var(--frame-edge); }
+.reference-header { position: absolute; top: 4.95%; left: 10.55%; right: 8.51%; height: 44px; display: flex; align-items: center; }
+.reference-wordmark { margin: 0; font-family: var(--font-wordmark); font-size: 25px; font-weight: 400; line-height: 1.3; color: var(--frame-green); white-space: nowrap; }
+.reference-nav { display: flex; align-items: center; gap: 66px; margin-left: 67px; }
+.reference-account { display: flex; align-items: center; gap: 67px; margin-left: auto; }
+.reference-nav-button { background: transparent; color: var(--frame-nav); font: 400 20px/28px var(--font-body); border: 0; border-radius: 0; padding: 0; height: auto; box-shadow: none; }
+.reference-login { font-size: 18px; }
+.reference-signup { color: var(--frame-nav); background: transparent; border: 1px solid var(--frame-green); border-radius: 8px; height: 44px; width: 98px; padding: 0; font: 400 18px/26px var(--font-body); box-shadow: 0 2px 5px var(--frame-shadow); }
+.reference-copy { position: absolute; left: 9.53%; top: 25.55%; z-index: 1; }
+.reference-title { color: var(--frame-red); font: 700 68px/1.1 var(--font-body); margin: 0; }
+.reference-subtitle { color: var(--frame-ink); font: 300 38px/1.35 var(--font-body); margin: 4px 0 0; }
+.reference-description { color: var(--frame-ink); font: 400 20px/26px var(--font-body); margin: 32px 0 0; }
+.reference-appointment { display: flex; margin-top: 52px; width: 294px; height: 51px; border: 0; border-radius: 9px; background: linear-gradient(to bottom, var(--frame-button-top), var(--frame-button-bottom)); color: var(--frame-ink); font: 400 24px/32px var(--font-body); padding: 0; box-shadow: -2px 3px 4px var(--frame-shadow); }
+.reference-food { position: absolute; left: 45.95%; top: 15.625%; width: 49.01%; height: auto; display: block; }
+@media (min-width: 1500px) {
+  .reference-frame { max-width: 1469px; margin-inline: auto; }
+}
+@media (max-width: 1100px) {
+  .reference-header { height: 34px; }
+  .reference-wordmark { font-size: 20px; }
+  .reference-nav { gap: 34px; margin-left: 40px; }
+  .reference-account { gap: 35px; }
+  .reference-nav-button { font-size: 16px; }
+  .reference-signup { width: 78px; height: 35px; font-size: 15px; }
+  .reference-title { font-size: 48px; }
+  .reference-subtitle { font-size: 29px; }
+  .reference-description { font-size: 16px; line-height: 22px; margin-top: 24px; }
+  .reference-appointment { width: 230px; height: 40px; font-size: 19px; margin-top: 32px; }
+}
+@media (max-width: 700px) {
+  .reference-frame { min-width: 700px; transform: scale(calc(100vw / 700px)); transform-origin: top left; }
+  .reference-header { left: 9.53%; right: 7%; }
+  .reference-nav { gap: 20px; margin-left: 28px; }
+  .reference-account { gap: 20px; }
+  .reference-wordmark { font-size: 16px; }
+  .reference-nav-button { font-size: 12px; }
+  .reference-signup { font-size: 12px; width: 59px; height: 28px; }
+  .reference-title { font-size: 32px; }
+  .reference-subtitle { font-size: 20px; }
+  .reference-description { font-size: 12px; line-height: 16px; margin-top: 16px; }
+  .reference-appointment { width: 145px; height: 27px; font-size: 14px; margin-top: 25px; border-radius: 5px; }
 }

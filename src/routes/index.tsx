@@ -1,24 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
+import foodAsset from "@/assets/nutrition-bowl.png.asset.json";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Anna Wysocka — Dietetyk kliniczny" },
+      { name: "description", content: "Anna Wysocka, dietetyk kliniczny. Indywidualne plany żywieniowe i konsultacje." },
+      { property: "og:title", content: "Anna Wysocka — Dietetyk kliniczny" },
+      { property: "og:description", content: "Indywidualne plany żywieniowe i konsultacje z Anną Wysocką." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="reference-page">
+      <section className="reference-frame" aria-label="Anna Wysocka — Dietetyk kliniczny">
+        <header className="reference-header">
+          <p className="reference-wordmark">Anna Wysocka</p>
+          <nav className="reference-nav" aria-label="Nawigacja główna">
+            <Button variant="frameNav">O mnie</Button>
+            <Button variant="frameNav">Współpraca</Button>
+          </nav>
+          <div className="reference-account">
+            <Button variant="frameNav" className="reference-login">Login</Button>
+            <Button variant="frameSignup">Sign up</Button>
+          </div>
+        </header>
+        <div className="reference-copy">
+          <h1 className="reference-title">Anna Wysocka</h1>
+          <p className="reference-subtitle">Dietetyk kliniczny</p>
+          <p className="reference-description">Get your custom plans &amp;<br />one-on-one guidance from our experts</p>
+          <Button variant="frameAppointment">Umów wizytę</Button>
+        </div>
+        <img className="reference-food" src={foodAsset.url} width="941" height="677" alt="Miska z awokado, groszkiem, warzywami i grzybami" />
+      </section>
+    </main>
   );
 }
