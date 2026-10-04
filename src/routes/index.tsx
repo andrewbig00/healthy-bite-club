@@ -46,8 +46,8 @@ function Index() {
         </div>
       </section>
       <section className="about-frame" aria-labelledby="about-title">
-        <h2 id="about-title" className="about-title">O MNIE</h2>
         <div className="desktop-content about-content">
+        <h2 id="about-title" className="about-title">O MNIE</h2>
         <div className="about-body">
         <div className="about-copy">
           <p className="about-description">Our team of expert nutritionists is here to help you achieve your health and wellness goals. Our nutritionists are highly trained and qualified professionals with a deep understanding of the science behind nutrition and how it can impact your body and mind</p>
