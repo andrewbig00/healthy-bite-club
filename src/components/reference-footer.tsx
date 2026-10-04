@@ -22,7 +22,7 @@ export function ReferenceFooter() {
   return (
     <footer className="reference-footer" aria-label="HealthyBite">
       <div className="footer-content">
-        <img className="footer-logo" src={logo.url} width="348" height="80" alt="HealthyBite" />
+        <img className="footer-logo" src={logo} width="348" height="80" alt="HealthyBite" />
         <nav className="footer-primary" aria-label="Footer navigation">
           {primaryLinks.map((label) => <Button key={label} variant="footerLink">{label}</Button>)}
         </nav>
@@ -33,7 +33,7 @@ export function ReferenceFooter() {
         <div className="footer-socials">
           {socialLinks.map(({ name, asset }) => (
             <Button key={name} variant="footerSocial" aria-label={name} title={name}>
-              <img src={asset.url} width="84" height="87" alt="" />
+              <img src={asset} width="84" height="87" alt="" />
             </Button>
           ))}
         </div>
