@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
     ],
     links: [
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Princess+Sofia&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Amita&family=Lato:wght@300;400;700&family=Open+Sans:wght@400;700&display=swap" },
       {
         rel: "stylesheet",
         href: appCss,
