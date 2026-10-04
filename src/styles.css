@@ -75,6 +75,10 @@
   --frame-button-top: oklch(0.873 0.096 145);
   --frame-button-bottom: oklch(0.936 0.061 145);
   --frame-shadow: oklch(0.36 0.027 145 / 28%);
+  --about-background: oklch(1 0 0);
+  --about-green: oklch(0.514 0.092 155);
+  --about-light-green: oklch(0.879 0.071 145);
+  --about-bullet-red: oklch(0.624 0.195 25);
   --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -177,6 +181,39 @@
 .reference-description { color: var(--frame-ink); font: 400 19px/26px var(--font-heading); margin: 30px 0 0; }
 .reference-appointment { display: flex; margin-top: 52px; width: 294px; height: 51px; border: 0; border-radius: 9px; background: linear-gradient(to bottom, var(--frame-button-top), var(--frame-button-bottom)); color: var(--frame-ink); font: 400 24px/32px var(--font-body); padding: 0; box-shadow: -2px 3px 4px var(--frame-shadow); }
 .reference-food { position: absolute; left: 45.95%; top: 15.625%; width: 49.01%; height: auto; display: block; }
+.about-frame { position: relative; width: 100%; max-width: 1469px; margin-inline: auto; aspect-ratio: 1920 / 993; background: var(--about-background); color: var(--frame-ink); }
+.about-title { position: absolute; top: 4.03%; left: 0; width: 48.8%; height: 19.94%; margin: 0; display: flex; align-items: center; justify-content: center; border-radius: 0 22px 22px 0; background: var(--about-green); color: var(--about-background); font: 700 74px/1 var(--font-heading); }
+.about-copy { position: absolute; left: 7.5%; top: 35.55%; width: 47.7%; }
+.about-description { margin: 0; font: 400 21px/28px var(--font-body); }
+.about-credentials { list-style: none; padding: 0; margin: 54px 0 0; display: flex; flex-direction: column; gap: 21px; font: 400 18px/23px var(--font-body); }
+.about-credentials li { position: relative; padding-left: 33px; }
+.about-credentials li::before { content: ""; position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(to bottom, var(--about-bullet-red), var(--about-light-green)); box-shadow: 0 2px 5px var(--frame-shadow); }
+.about-portrait { position: absolute; left: 59.9%; top: 26.18%; width: 40.1%; height: auto; }
+.about-dots { position: absolute; left: 80.6%; bottom: 0; display: flex; gap: 8px; }
+.about-dots span { width: 11px; height: 11px; border-radius: 50%; background: var(--about-light-green); }
+.about-dots span:nth-child(2) { background: var(--about-green); }
+@media (max-width: 1300px) and (min-width: 701px) {
+  .about-title { font-size: 60px; }
+  .about-description { font-size: 18px; line-height: 24px; }
+  .about-credentials { font-size: 15px; line-height: 20px; gap: 16px; margin-top: 38px; }
+  .about-credentials li { padding-left: 28px; }
+  .about-credentials li::before { width: 19px; height: 19px; }
+}
+@media (max-width: 1000px) and (min-width: 701px) {
+  .about-frame { min-height: 650px; }
+  .about-title { height: 130px; font-size: 48px; }
+  .about-copy { top: 220px; }
+  .about-credentials { margin-top: 28px; gap: 14px; }
+}
+@media (max-width: 700px) {
+  .about-frame { aspect-ratio: auto; padding-bottom: 24px; }
+  .about-title { position: relative; width: 65%; height: 90px; top: auto; font-size: 38px; border-radius: 0 16px 16px 0; }
+  .about-copy { position: relative; left: auto; top: auto; width: auto; margin: 38px 7.5% 0; }
+  .about-description { font-size: 18px; line-height: 25px; }
+  .about-credentials { margin-top: 32px; font-size: 16px; line-height: 22px; gap: 20px; }
+  .about-portrait { position: relative; left: auto; top: auto; width: 90%; margin: 28px 0 0 auto; }
+  .about-dots { position: relative; left: auto; bottom: auto; justify-content: center; margin-top: 12px; }
+}
 @media (min-width: 1500px) {
   .reference-frame { max-width: 1469px; margin-inline: auto; }
 }

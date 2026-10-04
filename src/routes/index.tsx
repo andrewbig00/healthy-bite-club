@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import foodAsset from "@/assets/nutrition-bowl.png.asset.json";
+import portraitAsset from "@/assets/about-portrait.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,6 +39,22 @@ function Index() {
           <Button variant="frameAppointment">Umów wizytę</Button>
         </div>
         <img className="reference-food" src={foodAsset.url} width="941" height="677" alt="Miska z awokado, groszkiem, warzywami i grzybami" />
+      </section>
+      <section className="about-frame" aria-labelledby="about-title">
+        <h2 id="about-title" className="about-title">O MNIE</h2>
+        <div className="about-copy">
+          <p className="about-description">Our team of expert nutritionists is here to help you achieve your health and wellness goals. Our nutritionists are highly trained and qualified professionals with a deep understanding of the science behind nutrition and how it can impact your body and mind</p>
+          <ul className="about-credentials">
+            <li>Registered Dietitian with the Academy of Nutrition and Dietetics</li>
+            <li>5+ years of experience in the field</li>
+            <li>Specialize in weight management, chronic disease prevention, and sports nutrition</li>
+            <li>Skilled in developing recipes and meal plans.</li>
+            <li>Passionate about helping people live healthy, fulfilling lives</li>
+            <li>Committed to staying up-to-date with the latest research and trends in nutrition</li>
+          </ul>
+        </div>
+        <img className="about-portrait" src={portraitAsset.url} width="770" height="683" alt="Uśmiechnięta kobieta w jeansowej kurtce" />
+        <div className="about-dots" aria-hidden="true"><span /><span /><span /></div>
       </section>
     </main>
   );
