@@ -2,4 +2,4 @@
 - [x] Correct full-width section structure and centered desktop containers without redesign.
 - [x] Verify desktop geometry and natural section flow.
 - [x] Add the supplied footer with exact cropped artwork and real text.
-- [ ] Verify the footer on desktop against the supplied reference.
+- [x] Verify the footer on desktop against the supplied reference.

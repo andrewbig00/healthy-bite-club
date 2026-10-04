@@ -179,7 +179,7 @@
 .footer-socials { display: flex; justify-content: center; gap: 40px; margin-top: 29px; }
 .footer-social { display: block; flex: 0 0 84px; width: 84px; height: 87px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .footer-social img { display: block; width: 84px; height: 87px; }
-.footer-copyright { margin: 89px 0 0; text-align: center; color: var(--footer-muted); font: 400 28px/34px var(--font-body); }
+.footer-copyright { margin: 84px 0 0; text-align: center; color: var(--footer-muted); font: 400 28px/34px var(--font-body); }
 .reference-frame { position: relative; width: 100%; aspect-ratio: 1469 / 768; isolation: isolate; }
 .reference-frame::before, .reference-frame::after { content: ""; position: absolute; z-index: -1; top: 0; height: 93.2%; border-radius: 0 0 50% 50% / 0 0 1% 1%; clip-path: polygon(0 0,100% 0,100% 91.8%,90% 94%,80% 96.2%,70% 98.2%,60% 99.6%,50% 100%,40% 99.6%,30% 98.2%,20% 96.2%,10% 94%,0 91.8%); }
 .reference-frame::before { left: -3%; width: 106%; background: var(--frame-outer); box-shadow: 0 5px 9px var(--frame-mint); }
