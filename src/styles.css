@@ -219,13 +219,13 @@
 }
 /* Desktop structure: reference geometry belongs to the content, not the section width. */
 @media (min-width: 1101px) {
-  .desktop-content { width: calc(100% - 80px); max-width: 1280px; margin-inline: auto; }
+  .desktop-content { --desktop-gutter: max(40px, (100vw - 1280px) / 2); width: calc(100% - 80px); max-width: 1280px; margin-inline: auto; }
   .reference-frame { max-width: none; aspect-ratio: auto; min-height: 768px; }
   .reference-content { padding-top: 38px; padding-bottom: 130px; }
   .reference-header { position: relative; inset: auto; height: auto; min-height: 44px; padding-left: 4.7266%; padding-right: 2.3828%; }
   .reference-body { display: grid; grid-template-columns: 45.3516% 54.6484%; margin-top: 38px; align-items: start; }
   .reference-copy { position: relative; inset: auto; margin-left: 7.838%; margin-top: 76.22px; }
-  .reference-food { position: relative; inset: auto; width: 102.925%; height: auto; }
+  .reference-food { position: relative; inset: auto; width: 102.925%; max-width: none; height: auto; }
   .about-frame { max-width: none; aspect-ratio: auto; padding-top: 30.62px; }
   .about-title { position: relative; inset: auto; width: calc(max(40px, (100% - 1280px) / 2) + min(622.4px, (100% - 80px) * 0.48625)); height: auto; min-height: 151.5px; font-size: 74px; padding-block: 38.75px; }
   .about-content { margin-top: 16.77px; }
@@ -235,7 +235,7 @@
   .about-credentials { font-size: 18px; line-height: 23px; gap: 21px; margin-top: 54px; }
   .about-credentials li { padding-left: 33px; }
   .about-credentials li::before { width: 22px; height: 22px; }
-  .about-portrait { position: relative; inset: auto; width: 119.102%; max-width: none; height: auto; }
+  .about-portrait { position: relative; inset: auto; width: min(119.102%, calc(100% + var(--desktop-gutter))); max-width: none; height: auto; }
   .about-dots { position: relative; inset: auto; margin-top: 27.3px; margin-left: 85.12%; }
 }
 @media (max-width: 1100px) {

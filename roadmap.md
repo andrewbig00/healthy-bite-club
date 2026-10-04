@@ -1,3 +1,3 @@
 - [x] Review Navbar, Hero, and About against supplied desktop references.
 - [x] Correct full-width section structure and centered desktop containers without redesign.
-- [ ] Verify desktop geometry and natural section flow.
+- [x] Verify desktop geometry and natural section flow.
